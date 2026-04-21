@@ -20,13 +20,13 @@
     </form>
 
     <hr> <?php
-    // 1. Verificamos se o formulário foi enviado através do método POST
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         
-        // 2. Capturamos o valor selecionado no campo 'ambiente'
+
         $ambiente = $_POST['ambiente'];
 
-        // 3. Estrutura Switch para decidir a recomendação
+
         switch ($ambiente) {
             case 'residencial':
                 echo "<h3>Recomendação da ConectaJá:</h3>";
@@ -47,7 +47,7 @@
                 break;
 
             default:
-                // Caso o usuário clique em enviar sem selecionar nada ou ocorra erro
+
                 echo "<p style='color: red;'>Erro: Ambiente não reconhecido em nosso banco de dados.</p>";
                 break;
         }
